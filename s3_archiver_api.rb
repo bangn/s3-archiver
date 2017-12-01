@@ -18,6 +18,15 @@ class S3ArchiverApi < Roda
 
       request_json
     end
+
+    r.post "delete" do
+      request_json = MultiJson.load(request.body.read, symbolized_keys: true)
+      filename = request_json["filename"]
+
+      File.rename(filename, "#{filename}.deleted")
+
+      { file: filename }
+    end
   end
 
   def s3_handler
