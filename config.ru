@@ -1,3 +1,9 @@
+if ENV["APP_ENV"] == "development"
+  require "dotenv"
+
+  Dotenv.load
+end
+
 require_relative "s3_archiver_api"
 
 module Rack
