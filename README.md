@@ -30,11 +30,11 @@ Then server can be access using `http://localhost:9292`
 ### Upload file to s3
 
 ```
-curl https://localhost:9292/upload -d '{"filename": "/absolute/path/to/filename"}'
+curl http://localhost:9292/upload -d '{"filename": "/absolute/path/to/filename"}'
 ```
 
 ### Delete local file
 
 ```
-curl https://localhost:9292/delete -d '{"filename": "/absolute/path/to/filename"}'
+curl http://localhost:9292/delete -d '{"filename": "/absolute/path/to/filename"}'
 ```
