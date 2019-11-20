@@ -1,7 +1,7 @@
 require "roda"
 require "multi_json"
 
-require "./lib/s3_handler.rb"
+require "./lib/s3_handler"
 
 class S3ArchiverApi < Roda
   plugin :indifferent_params
